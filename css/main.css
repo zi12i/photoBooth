@@ -1,0 +1,19 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 60% 40%;
+    background-color: rgb(235, 235, 251);
+}
+.content {
+    font-size: 100px;
+    color: rgb(4, 4, 41);
+    text-align: center;
+}
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+.arrow {
+    height: 250px;
+}

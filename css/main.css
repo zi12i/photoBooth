@@ -13,7 +13,8 @@
 .imgContainer {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
-.arrow {
-    height: 250px;
+.footPrint {
+    height: 350px;
 }

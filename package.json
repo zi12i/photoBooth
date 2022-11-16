@@ -1,0 +1,30 @@
+{
+  "name": "onephotobooth",
+  "version": "0.0.1",
+  "description": "photobooth",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "KYOL",
+  "license": "ISC",
+  "dependencies": {
+    "@jorgeferrero/stream-to-buffer": "^2.0.6",
+    "base64-to-image": "^1.0.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-js-image": "^0.0.6",
+    "sequelize": "^6.25.5",
+    "terminal-image": "^2.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

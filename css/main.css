@@ -1,0 +1,42 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 60% 40%;
+    background-color: rgb(235, 235, 251);
+}
+.photoContainer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 65% 20%;
+}
+.content {
+    font-size: 100px;
+    color: rgb(4, 4, 41);
+    text-align: center;
+}
+.slogan {
+    font-size: 50px;
+    text-align: center;
+}
+.warn {
+    font-size: 30px;
+    text-align: center;
+    color: grey;
+}
+.photoMain {
+    height: 100%;
+    width: 100%;
+}
+.image {
+    height: 100%;
+}
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.footPrint {
+    height: 350px;
+}

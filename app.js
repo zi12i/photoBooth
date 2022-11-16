@@ -1,20 +1,25 @@
 const express = require("express");
-// const path = require("path");
+const path = require("path");
 // const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 // const session = require("express-session");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 dotenv.config({ path: "./.env" });
 
+const indexRouter = require("./routes/index");
 const cameraRouter = require("./routes/camera");
 
 // const { sequelize } = require("./models");
 
 const app = express();
+app.use(cors());
 
 const PORT = process.env.PORT;
 app.set("port", PORT);
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "html");
 
 // sequelize
 //   .sync({ force: false })
@@ -27,25 +32,14 @@ app.set("port", PORT);
 
 app.use(morgan("dev"));
 
-// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/img", express.static(path.join(__dirname, "img")));
 // app.use(cors());
 
 // app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser(process.env.COOKIE_SECRET));
-// app.use(
-//   session({
-//     resave: false,
-//     saveUninitialized: false,
-//     secret: process.env.COOKIE_SECRET,
-//     cookie: {
-//       httpOnly: true,
-//       secure: false,
-//     },
-//   })
-// );
 
+app.use("/index", indexRouter);
 app.use("/camera", cameraRouter);
 
 app.use((req, res, next) => {

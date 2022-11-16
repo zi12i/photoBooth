@@ -8,7 +8,7 @@ const cors = require("cors");
 
 dotenv.config({ path: "./.env" });
 
-const indexRouter = require("./routes/index");
+// const indexRouter = require("./routes/index");
 const cameraRouter = require("./routes/camera");
 
 // const { sequelize } = require("./models");
@@ -21,9 +21,14 @@ app.set("port", PORT);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "html");
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/scream.html'))
-})
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/scream.html"));
+});
+
+app.get("/index", (req, res) => {
+  res.redirect(path.join(__dirname, "./views/photobooth.html"));
+});
+
 // sequelize
 //   .sync({ force: false })
 //   .then(() => {
@@ -42,7 +47,7 @@ app.use("/img", express.static(path.join(__dirname, "img")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/index", indexRouter);
+// app.use("/", indexRouter);
 app.use("/camera", cameraRouter);
 
 app.use((req, res, next) => {

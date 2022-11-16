@@ -21,6 +21,9 @@ app.set("port", PORT);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "html");
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../views/scream.html'))
+})
 // sequelize
 //   .sync({ force: false })
 //   .then(() => {

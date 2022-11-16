@@ -29,6 +29,10 @@ app.get("/index", (req, res) => {
   res.redirect(path.join(__dirname, "./views/photobooth.html"));
 });
 
+app.get("/qr", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/qr.html"));
+});
+
 // sequelize
 //   .sync({ force: false })
 //   .then(() => {

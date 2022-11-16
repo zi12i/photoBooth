@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../css/main.css" rel="stylesheet" />
+    <!-- <link href="../css/main.css" rel="stylesheet" /> -->
     <title>Document</title>
   </head>
   <body>
@@ -14,8 +14,40 @@
           버튼을 누르면<br />
           5초 뒤에 촬영됩니다.
         </p>
-        <div class="btn"><span><a href="../photo.html">사진보기</a></span></div>
+        <div class="btnContainer">
+          <a  href="/qr" class="btn">
+            <span>사진 다운받기</span>
+          </a>
+        </div>
       </div>
     </div>
   </body>
 </html>
+<style>
+.container {
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 60% 40%;
+    background-color: rgb(235, 235, 251);
+}
+.content {
+    font-size: 80px;
+    color: rgb(4, 4, 41);
+    text-align: center;
+}
+.btnContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.btn {
+  width: 80%;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding-top: 40px;
+}
+</style>

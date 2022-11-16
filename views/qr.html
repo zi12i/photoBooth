@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="qr">
+            <img src="../img/qrcode.png">
+        </div>
+        <div class="content">
+            <p>QR코드를 스캔하시면 사진을 다운받으실 수 있습니다!</p>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.qr {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    text-align: center;
+    font-size: 30px;
+}
+</style>

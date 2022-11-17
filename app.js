@@ -25,16 +25,16 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/camera", cameraRouter);
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/scream.html"));
-});
-
-app.get("/index", (req, res) => {
-  res.redirect(path.join(__dirname, "./views/photobooth.html"));
-});
-
 app.get("/qr", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/qr.html"));
+});
+
+app.get("/photo", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/photo.html"));
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/main.html"));
 });
 
 app.use((req, res, next) => {

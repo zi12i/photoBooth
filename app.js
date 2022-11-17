@@ -33,6 +33,10 @@ app.get("/photo", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/photo.html"));
 });
 
+app.get("/black", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/black.html"));
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/main.html"));
 });

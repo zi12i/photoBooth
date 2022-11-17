@@ -21,8 +21,8 @@ var upload = multer({
   // },
 });
 
-// router.post("/image", upload.array("img"), (req, res) => {
-router.post("/image", (req, res) => {
+router.post("/image", upload.array("img"), (req, res) => {
+  // router.post("/image", (req, res) => {
   console.log("camera/image : 요청 들어옴");
 
   // const url = "http://192.168.0.16:5500/views/photo.html";
